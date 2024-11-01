@@ -1,0 +1,55 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* :root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+} */
+
+@font-face {
+  font-family: "Zamanda";
+  src: url("../public/ZamandaDemoRegular.ttf");
+}
+
+/* @layer base {
+  html {
+    --color-primary: #00bf63;
+    --color-secondary: #8ffF00;
+    --color-red-100: #fb0505;
+    --color-red-200: #BE3636;
+    --color-gray: #c5c3c3;
+    --color-bg-700: #334155;
+    --color-bg-800: #1e293b;
+    --color-bg-900: #0f172a;
+    --color-bg-950: #020617;
+  }
+
+  @import "themes/theme1.css";
+  @import "themes/theme2.css";
+} */
