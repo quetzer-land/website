@@ -1,15 +1,15 @@
 "use client";
-import Loading from "@/app/components/Loading";
-import { Navbar } from "@/app/components/Navbar";
-import Notification from "@/app/components/Notification";
-import ThemeInitializer from "@/app/components/ThemeInitializer";
-import { useUser } from "@/app/components/UserContext";
+import Loading from "../../components/Loading";
+import { Navbar } from "../../components/Navbar";
+import Notification from "../../components/Notification";
+import ThemeInitializer from "../../components/ThemeInitializer";
+import { useUser } from "../../components/UserContext";
 import {
   customFetch,
   findPermissions,
   getHumanDate,
   truncateContent,
-} from "@/app/utils/functions_utils";
+} from "../../utils/functions_utils";
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";

@@ -1,11 +1,11 @@
 "use client";
-import ModalEditComment from "@/app/components/ModalEditComment";
-import ModalPostEditing from "@/app/components/ModalEditPost";
-import { Navbar } from "@/app/components/Navbar";
-import Notification from "@/app/components/Notification";
-import ThemeInitializer from "@/app/components/ThemeInitializer";
-import { useUser } from "@/app/components/UserContext";
-import { customFetch, getHumanDate } from "@/app/utils/functions_utils";
+import ModalEditComment from "../../components/ModalEditComment";
+import ModalPostEditing from "../../components/ModalEditPost";
+import { Navbar } from "../../components/Navbar";
+import Notification from "../../components/Notification";
+import ThemeInitializer from "../../components/ThemeInitializer";
+import { useUser } from "../../components/UserContext";
+import { customFetch, getHumanDate } from "../../utils/functions_utils";
 import Image from "next/image";
 import Link from "next/link";
 import { FormEvent, useEffect, useState } from "react";
