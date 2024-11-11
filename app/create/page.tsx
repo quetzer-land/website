@@ -152,10 +152,10 @@ export default function Login() {
 
     return (
         mounted && (
-            <div className="bg-white dark:bg-slate-800 text-black dark:text-white">
+            <div className="bg-white dark:bg-slate-800 text-black dark:text-white min-h-screen">
                 <ThemeInitializer />
-                <main className="flex items-center justify-center h-screen">
-                    <div className="w-11/12 sm:w-4/5 lg:w-3/4 max-w-screen-lg min-h-screen p-8 bg-secondWhite-50 dark:bg-slate-900">
+                <main className="flex items-center justify-center min-h-screen overflow-y-auto">
+                    <div className="w-11/12 sm:w-4/5 lg:w-3/4 max-w-screen-lg min-h-[80vh] p-8 bg-secondWhite-50 dark:bg-slate-900 rounded-lg shadow-lg">
                         <Navbar />
                         {preview === false && (
                             <div className="flex min-h-full flex-col justify-center px-6 pb-12 lg:px-8">

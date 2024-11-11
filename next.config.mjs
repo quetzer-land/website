@@ -9,6 +9,11 @@ const nextConfig = {
         port: "3333",
         pathname: "/**",
       },
+      {
+        protocol: "https",
+        hostname: "api.quetzer.land",
+        pathname: "/**",
+      },
     ],
   },
   i18n: {

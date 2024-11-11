@@ -61,7 +61,8 @@ export default function Me() {
         );
         setPosts(postsWithImages);
       } else {
-        throw new Error("Aucun post trouvé");
+        // throw new Error("Aucun post trouvé");
+        console.log("Aucun post trouvé, il n'a pas publié de posts")
       }
     } catch (error) {
       console.error("Erreur lors de la récupération des posts :", error);

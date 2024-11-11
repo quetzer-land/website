@@ -29,17 +29,19 @@ export default function Home() {
       <div className="bg-white dark:bg-slate-800 min-h-screen">
         <ThemeInitializer />
         <main className="flex items-center justify-center">
-          <button
-            onClick={goToPreviousPage}
-            className="hidden lg:block lg:pl-2 xl:pl-5"
-          >
-            <Image
-              src={"/arrow-left.svg"}
-              alt={'Arrow Left'}
-              height={150}
-              width={150}
-            />
-          </button>
+          {posts.length > 4 && (
+            <button
+              onClick={goToPreviousPage}
+              className="hidden lg:block lg:pl-2 xl:pl-5"
+            >
+              <Image
+                src={"/arrow-left.svg"}
+                alt={'Arrow Left'}
+                height={150}
+                width={150}
+              />
+            </button>
+          )}
           <div className="w-11/12 sm:w-4/5 lg:w-3/4 max-w-screen-lg min-h-screen p-8 bg-secondWhite-50 dark:bg-slate-900">
             <Navbar />
             <div className="h-5/6">
@@ -89,38 +91,42 @@ export default function Home() {
                 ) : (
                   <Loading />
                 )}
-                <div className="lg:hidden flex justify-center">
-                  <button onClick={goToPreviousPage} className="">
-                    <Image
-                      src={"/arrow-left.svg"}
-                      alt="Arrow left"
-                      height={100}
-                      width={100}
-                    />
-                  </button>
-                  <button onClick={goToNextPage} className="">
-                    <Image
-                      src={"/arrow-right.svg"}
-                      alt="Arrow right"
-                      height={100}
-                      width={100}
-                    />
-                  </button>
-                </div>
+                {posts.length > 4 && (
+                  <div className="lg:hidden flex justify-center">
+                    <button onClick={goToPreviousPage} className="">
+                      <Image
+                        src={"/arrow-left.svg"}
+                        alt="Arrow left"
+                        height={100}
+                        width={100}
+                      />
+                    </button>
+                    <button onClick={goToNextPage} className="">
+                      <Image
+                        src={"/arrow-right.svg"}
+                        alt="Arrow right"
+                        height={100}
+                        width={100}
+                      />
+                    </button>
+                  </div>
+                )}
               </div>
             </div>
           </div>
-          <button
-            onClick={goToNextPage}
-            className="hidden lg:block lg:pl-2 xl:pl-5"
-          >
-            <Image
-              src={"/arrow-right.svg"}
-              alt="Arrow right"
-              height={150}
-              width={150}
-            />
-          </button>
+          {posts.length > 4 && (
+            <button
+              onClick={goToNextPage}
+              className="hidden lg:block lg:pl-2 xl:pl-5"
+            >
+              <Image
+                src={"/arrow-right.svg"}
+                alt="Arrow right"
+                height={150}
+                width={150}
+              />
+            </button>
+          )}
         </main>
         {notification && (
           <Notification

@@ -71,8 +71,8 @@ export default function Me() {
                         <div className="text-black dark:text-white">
                             <h1 className="text-center text-3xl">Quetzer</h1>
                             <div className="flex justify-between my-10 mx-5 lg:mx-28 xl:mx-48">
-                                <Link href={"https://github.com"} target="_blank" className="text-primary duration-150 hover:text-hover hover:underline text-2xl">Source code</Link>
-                                <Link href={"https://github.com"} target="_blank" className="text-primary duration-150 hover:text-hover hover:underline text-2xl">About</Link>
+                                <Link href={"https://github.com/quetzer-land"} target="_blank" className="text-primary duration-150 hover:text-hover hover:underline text-2xl">Source code</Link>
+                                <Link href={"https://discord.gg/uT8zVVn6rQ"} target="_blank" className="text-primary duration-150 hover:text-hover hover:underline text-2xl">About</Link>
                             </div>
                             <h2 className="text-center text-3xl">This instance</h2>
                             <div className="flex justify-between items-center my-10 mx-5 lg:mx-28 xl:mx-48">

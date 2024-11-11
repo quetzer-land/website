@@ -129,7 +129,7 @@ export default function Login() {
                   href="/register"
                   className="font-semibold duration-150 leading-6 text-primary hover:text-hover"
                 >
-                  Why did you wait ?
+                  What are you waiting for ?
                 </Link>
               </p>
             </div>
