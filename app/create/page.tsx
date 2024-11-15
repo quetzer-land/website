@@ -121,7 +121,7 @@ export default function Login() {
             const formData = new FormData();
             formData.append("image", selectedImage);
 
-            const response = await api.post(`http://localhost:3333/posts/upload`, {
+            const response = await api.post(`${process.env.NEXT_PUBLIC_API}/posts/upload`, {
                 body: formData,
             });
 
