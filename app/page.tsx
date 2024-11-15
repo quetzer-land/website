@@ -46,7 +46,7 @@ export default function Home() {
             <Navbar />
             <div className="h-5/6">
               <div className="h-5/6">
-                {loading === false ? (
+                {loading === false && posts.length !== 0 ? (
                   posts.map((post) => (
                     <div
                       key={post.id}
@@ -89,7 +89,11 @@ export default function Home() {
                     </div>
                   ))
                 ) : (
-                  <Loading />
+                  <div className="flex justify-center my-28">
+                    <h2 className="text-center text-2xl text:black dark:text-white">
+                      Oops... nothing for the moment!
+                    </h2>
+                  </div>
                 )}
                 {posts.length > 4 && (
                   <div className="lg:hidden flex justify-center">

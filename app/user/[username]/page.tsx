@@ -93,7 +93,8 @@ export default function Page({ params }: { params: { username: string } }) {
         );
         setPosts(postsWithImages);
       } else {
-        throw new Error("Aucun post trouvé");
+        // throw new Error("Aucun post trouvé");
+        console.log("Aucun post trouvé")
       }
     } catch (error) {
       console.error("Erreur lors de la récupération des posts :", error);
@@ -213,31 +214,32 @@ export default function Page({ params }: { params: { username: string } }) {
               ) : (
                 <Loading />
               )}
-              <div className="flex justify-center">
-                <button
-                  onClick={goToPreviousPage}
-                  className="hidden lg:block lg:pl-2 xl:pl-5"
-                >
-                  <Image
-                    src={"/arrow-left.svg"}
-                    alt="Arrow left"
-                    height={100}
-                    width={100}
-                  />
-                </button>
-                <button
-                  onClick={goToNextPage}
-                  className="hidden lg:block lg:pl-2 xl:pl-5"
-                >
-                  <Image
-                    src={"/arrow-right.svg"}
-                    alt="Arrow right"
-                    height={100}
-                    width={100}
-                  />
-                </button>
-              </div>
-
+              {posts.length >= 4 && (
+                <div className="flex justify-center">
+                  <button
+                    onClick={goToPreviousPage}
+                    className="hidden lg:block lg:pl-2 xl:pl-5"
+                  >
+                    <Image
+                      src={"/arrow-left.svg"}
+                      alt="Arrow left"
+                      height={100}
+                      width={100}
+                    />
+                  </button>
+                  <button
+                    onClick={goToNextPage}
+                    className="hidden lg:block lg:pl-2 xl:pl-5"
+                  >
+                    <Image
+                      src={"/arrow-right.svg"}
+                      alt="Arrow right"
+                      height={100}
+                      width={100}
+                    />
+                  </button>
+                </div>
+              )}
               {notification && (
                 <Notification
                   message={notification.message}
