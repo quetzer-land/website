@@ -53,3 +53,8 @@ body {
   @import "themes/theme1.css";
   @import "themes/theme2.css";
 } */
+
+hr {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}

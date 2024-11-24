@@ -35,7 +35,7 @@ export async function generateMetadata({
 }): Promise<Metadata> {
     const post = await fetchData(params.slug);
     return {
-        metadataBase: new URL(`${process.env.NEXT_PUBLIC_API}`),
+        metadataBase: new URL(`${process.env.NEXT_WEBSITE}`),
         title: `Quetzer - ${post ? post.title : params.slug}`,
         description: `${post?.description}`,
         creator: `${post?.author.username}`,
@@ -63,7 +63,7 @@ export async function generateMetadata({
             },
             type: "article",
             siteName: "Quetzer",
-            url: `${process.env.NEXT_PUBLIC_API}/post/${post?.slug}`,
+            url: `${process.env.NEXT_WEBSITE}/post/${post?.slug}`,
         },
     };
 }

@@ -9,6 +9,7 @@ import { customFetch, getHumanDate } from "../../utils/functions_utils";
 import Image from "next/image";
 import Link from "next/link";
 import { FormEvent, useEffect, useState } from "react";
+import ReactMarkdown from "react-markdown";
 
 export default function Page({ params }: { params: { slug: string } }) {
   const [notification, setNotification] = useState<{
@@ -245,7 +246,7 @@ export default function Page({ params }: { params: { slug: string } }) {
                     <hr className="my-3" />
                     <div className="">
                       <p className="tracking-wide break-words text-lg xl:text-xl">
-                        {post.content}
+                        <ReactMarkdown>{post.content}</ReactMarkdown>
                       </p>
                     </div>
                     <div className="mx-10 w-full md:w-2/3">

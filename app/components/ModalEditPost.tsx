@@ -148,10 +148,13 @@ const ModalPostEditing = (props: any) => {
 
   return (
     <>
-      <div className="fixed inset-0 opacity-25 bg-black"></div>
+      <div className="fixed inset-0 bg-black opacity-25"></div>
       <div className="fixed inset-0 flex justify-center items-center z-10">
-        <div className="bg-secondWhite-200 dark:bg-slate-900 text-black dark:text-white rounded-3xl w-11/12 sm:w-4/5 lg:w-2/3 xl:w-1/2 2xl:w-1/3 h-2/3">
-          <div className="flex justify-end">
+        <div
+          className="bg-secondWhite-200 dark:bg-slate-900 text-black dark:text-white rounded-3xl w-11/12 sm:w-4/5 lg:w-2/3 xl:w-1/2 2xl:w-1/3 max-h-[90vh] overflow-y-auto"
+          style={{ padding: "1rem" }}
+        >
+          <div className="flex justify-between">
             <button
               className="hover:bg-red-100 rounded-3xl py-3 px-4 m-3"
               onClick={() => props.setModalState(false)}

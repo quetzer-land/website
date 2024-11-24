@@ -35,7 +35,7 @@ export async function generateMetadata({
   const user = await fetchUser(params.username);
   // const image = await fetchUserImage(params.username, user?.id);
   return {
-    metadataBase: new URL(`${process.env.NEXT_PUBLIC_API}`),
+    metadataBase: new URL(`${process.env.NEXT_WEBSITE}`),
     title: `Quetzer - ${user ? user.username : params.username}`,
     description: `${user?.biography}`,
     creator: `${user?.username}`,
@@ -63,7 +63,7 @@ export async function generateMetadata({
       },
       type: "profile",
       siteName: "Quetzer",
-      url: `${process.env.NEXT_PUBLIC_API}/user/${user?.username}`,
+      url: `${process.env.NEXT_WEBSITE}/user/${user?.username}`,
     },
   };
 }
